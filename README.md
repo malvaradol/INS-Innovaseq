@@ -5,7 +5,7 @@ Este repositorio contiene la información necesaria para seguir paso a paso los 
 
 En el taller 1 haremos un breve repaso de lo aprendido durante la primera sesión acerca de los métodos para inferir filogenias, así como los diferentes pasos relacionados a este proceso. Para este objetivo, se utilizará un set de datos correspondiente a los arenavirus del Nuevo Mundo y las reconstrucciones se harán mediante el programa IQTree.
 
-Ir al [taller 1](https://github.com/malvaradol/INS-Innovaseq/tree/main?tab=readme-ov-file).
+Ir al [taller 1](https://github.com/malvaradol/INS-Innovaseq/tree/main/Taller_1).
 
 ## Taller #2
 
