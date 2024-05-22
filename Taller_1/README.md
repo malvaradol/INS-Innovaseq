@@ -76,4 +76,4 @@ Cargue el archivo .treefile en la plataforma iTol y adaptelo para mejorar la vis
 "Originally, this work led to a classification into three distinct lineages: Lineage A hosted Flexal, Parana, Pichinde, and Tamiami viruses, while lineage B extended its embrace to Amapari, Guanarito (GUA), Junin (JUN), Machupo (MAC), Sabia (SAB), and Tacaribe viruses. The enigmatic Latino and Oliveros viruses were allocated to lineage C. Remarkably, a compelling revelation stood out—lineage B served as the ancestral cradle for the highly pathogenic members of the Tacaribe complex (GUA, JUN, MAC, SAB), offering a glimpse into the potential evolution of these viruses. Currently, New World arenaviruses are categorized into four distinct clades: A, B, C, and A/Rec (Clade D)."
 
 Esta es una versión final del árbol realizada para un capítulo de un libro.
-(![image](https://github.com/malvaradol/INS-Innovaseq/assets/62664336/4a0a2139-6f15-4ae5-84f2-a6e6d3725640)) 
+![image](https://github.com/malvaradol/INS-Innovaseq/assets/62664336/4a0a2139-6f15-4ae5-84f2-a6e6d3725640)
