@@ -1,1 +1,6 @@
+# Datación molecular mediante datos heterocrónicos y promediado de modelos de sustitución con métodos Bayesianos
+
+## Contexto
+
+En este tutorial analizaremos 100 secuencias completas del genoma de la pandemia de gripe H1N1 de 2009 en Norteamérica. Las secuencias se recogieron aproximadamente entre febrero y noviembre, de modo que sus tiempos de muestreo pueden utilizarse para la calibración. Fueron analizadas por Hedge y Rambaut (Hedge et al., 2013). Un aspecto importante del uso de tiempos de muestreo para la calibración es que el tiempo de muestreo debe capturar un número suficiente de sustituciones, es decir, la población debe estar evolucionando de forma mensurable (Drummond et al., 2003). Una forma de verificar si una población evoluciona de forma mensurable es comparar la distribución a priori y a posteriori de la altura del árbol, como haremos aquí. También utilizaremos un reloj molecular relajado y el complemento de prueba bModel para promediar los modelos de sustitución (Bouckaert & Drummond, 2017). En los ejercicios opcionales podemos comparar las estimaciones de un reloj molecular relajado con las de un modelo de reloj molecular estricto. En un tutorial posterior utilizaremos la coalescencia exponencial y el modelo constante de nacimiento-muerte para inferir parámetros epidemiológicos.
 
