@@ -28,17 +28,17 @@ Una vez tengan la base de datos en el servidor, deberán introducir el siguiente
 ```
 iqtree -s PJH_psammolestes.fasta -bb 1000 -alrt 1000
 ```
-El parámetro "-s" indica el alineamiento que se le proporciona al programa, "-bb" y "-alrt" corresponden al bootstrap y a un likelihood ratio test llamado SH-like. Bajo este comando, el programa hará automaticamente la selección del modelo y determinará automaticamente el número de CPUs a utilizar en la corrida.
+El parámetro ```-s``` indica el alineamiento que se le proporciona al programa, ```-bb``` y ```-alrt``` corresponden al bootstrap y a un likelihood ratio test llamado SH-like. Bajo este comando, el programa hará automaticamente la selección del modelo y determinará automaticamente el número de CPUs a utilizar en la corrida.
 
 ## 4. Análisis de los outputs generados por IQTree
 
 IQTree genera diferentes outputs que contienen diferente información relevante, sin embargo, nos enfocaremos en tres archivos principales que contienen toda la información que necesitaremos tener en cuenta para asegurarnos de que todo salió bien:
 
-- PJH_psammolestes.fasta.iqtree: Este archivo corresponde al reporte final de la corrida. Contiene resultados computacionales y una representación textual del árbol final.
-- PJH_pasmmolestes.fasta.treefile: Este es el archivo que usaremos para generar la representación gráfica en la herramienta iTol. Es un árbol en formato Newick.
-- PJH_psammolestes.fasta.log: Un archivo de registro que contiene información de toda la corrida.
+- ```PJH_psammolestes.fasta.iqtree```: Este archivo corresponde al reporte final de la corrida. Contiene resultados computacionales y una representación textual del árbol final.
+- ```PJH_pasmmolestes.fasta.treefile```: Este es el archivo que usaremos para generar la representación gráfica en la herramienta iTol. Es un árbol en formato Newick.
+- ```PJH_psammolestes.fasta.log```: Un archivo de registro que contiene información de toda la corrida.
 
-Si por alguna razón no pudieron correr el programa, [aquí] pueden descargar el archivo .iqtree que se generó, y [aquí] pueden descargar el archivo .treefile que vamos a usar para construir la filogenia en iTol. Pueden revisar estos archivos con cualquier editor de texto, ya que son archivos de texto plano donde solo cambia la extensión.
+Si por alguna razón no pudieron correr el programa, [aquí] pueden descargar el archivo ```.iqtree``` que se generó, y [aquí] pueden descargar el archivo ```.treefile``` que vamos a usar para construir la filogenia en iTol. Pueden revisar estos archivos con cualquier editor de texto, ya que son archivos de texto plano donde solo cambia la extensión.
 
 ## 5. Cargar el archivo .treefile en iTol
 
@@ -54,6 +54,8 @@ Descargue [aquí]() el alineamiento de arenavirus.
 
 ## 2. Control de calidad de los datos
 
+Cargue y analize el alineamiento de arenavirus en la herramienta de su preferencia, ¿están los datos listos para ser utilizados?
+
 Es importante tener en cuenta que entre más diferentes sean los organismos que estemos analizando, debemos esperar que las secuencias sean mucho más diferentes entre sí y que los gaps sean más comunes. En este caso, el alineamiento ya está correctamente curado, pero es para ejemplificar algunas de las dificultades que se tienen al trabajar con organismos cada vez más diferentes (si lo comparamos por ejemplo con el alineamiento de PJH del ejemplo anterior). Siempre hacerlo lo mejor posible pero tener presente que siempre que se quita o se pone información estamos cambiando la historia evolutiva de los datos crudos, es por esto que hay que evitar modificar en gran medida los alineamientos.
 
 ## 3. IQTree
@@ -63,7 +65,7 @@ Al igual que con el ejemplo de _Psammolestes_, usar el siguiente código para ge
 ```
 iqtree -s PJH_psammolestes.fasta -bb 1000 -alrt 1000
 ```
-Es posible que 1000 replicas de bootstrap no sean suficientes, si tenemos en cuenta el gran número de posiciones con variantes en nuestras secuencias (entre más varíen las secuencias, más complejo el modelo y más le tomará al programa finalizar). Para verificar si son suficientes, dentro de las últimas lineas del programa este les indicará si no se logró la convergencia del modelo, y les recomendará aumentar el número de réplicas. En caso de que esto sea necesario, cambiar el parámetro "-bb" de 1000 a 2000 (generalmente se incrementa en múltiplos de 1000).
+Es posible que 1000 replicas de bootstrap no sean suficientes, si tenemos en cuenta el gran número de posiciones con variantes en nuestras secuencias (entre más varíen las secuencias, más complejo el modelo y más le tomará al programa finalizar). Para verificar si son suficientes, dentro de las últimas lineas del programa este les indicará si no se logró la convergencia del modelo, y les recomendará aumentar el número de réplicas. En caso de que esto sea necesario, cambiar el parámetro ```-bb``` de 1000 a 2000 (generalmente se incrementa en múltiplos de 1000).
 
 ## 4. Análisis de los outputs para retomar información de importancia.
 
@@ -71,7 +73,7 @@ Teniendo en cuenta lo que se aprendió anteriormente, ¿qué modelo seleccionó 
 
 ## 5. Procesamiento del archivo .treefile en iTol
 
-Cargue el archivo .treefile en la plataforma iTol y adaptelo para mejorar la visibilidad de los diferentes grupos de la filogenia. Construya un párrafo corto donde interprete los resultados obtenidos en la filogenia y comparelos con el siguiente párrafo obtenido de la literatura sobre los arenavirus:
+Cargue el archivo ```.treefile``` en la plataforma iTol y adaptelo para mejorar la visibilidad de los diferentes grupos de la filogenia. Construya un párrafo corto donde interprete los resultados obtenidos en la filogenia y comparelos con el siguiente párrafo obtenido de la literatura sobre los arenavirus:
 
 "Originally, this work led to a classification into three distinct lineages: Lineage A hosted Flexal, Parana, Pichinde, and Tamiami viruses, while lineage B extended its embrace to Amapari, Guanarito (GUA), Junin (JUN), Machupo (MAC), Sabia (SAB), and Tacaribe viruses. The enigmatic Latino and Oliveros viruses were allocated to lineage C. Remarkably, a compelling revelation stood out—lineage B served as the ancestral cradle for the highly pathogenic members of the Tacaribe complex (GUA, JUN, MAC, SAB), offering a glimpse into the potential evolution of these viruses. Currently, New World arenaviruses are categorized into four distinct clades: A, B, C, and A/Rec (Clade D)."
 
