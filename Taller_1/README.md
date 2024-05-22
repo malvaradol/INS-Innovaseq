@@ -50,7 +50,7 @@ Para este ejercicio, usaremos una base de datos que utiliza el gen GPC de los ar
 
 ## 1. Descargar los datos
 
-Descargue [aquí]() el alineamiento de arenavirus.
+Descargue [aquí](https://github.com/malvaradol/INS-Innovaseq/blob/main/DB/Arenavirus_aln_final.fasta) el alineamiento de arenavirus.
 
 ## 2. Control de calidad de los datos
 
