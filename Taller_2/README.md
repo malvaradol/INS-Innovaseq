@@ -53,6 +53,20 @@ Una vez ponga a correr el programa, empezarán a correr números en el fondo de 
 
 ![image](https://github.com/malvaradol/INS-Innovaseq/assets/62664336/3d925ba5-6ea2-4079-b196-a4484d487549)
 
+## Análisis de resultados
 
+BEAST es un programa que dependiendo de la complejidad de los parámetros, puede tomar un tiempo largo en terminar. Por esta razón, les compartí los archivos correspondientes a las corridas finalizadas para que puedan analizar los resultados sin tener que esperar a que termine la corrida, estos archivos los pueden encontrar [aquí](https://github.com/malvaradol/INS-Innovaseq/tree/main/DB/BEAST).
+
+Primero, vamos a verificar que se tenga suficiente muestreo de la distribución estacionaria. Para esto, carguen el archivo h1n1_UCLD.log en el programa Tracer (que se encuentra en la carpeta descomprimida donde descargaron BEAST). Luego de cargar el archivo, seleccionen la pestaña "Trace" en la parte superior derecha y evalúen la distribución estacionaria de las variables "TreeHeight" y de los parámetros del modelo de reloj ("rate.mean" y "rate.variance").
+
+**¿Tenemos suficiente muestreo de la distribución estacionaria?**
+
+El estadístico "TreeHeight" nos da la distribución marginal posterior de la edad de la raíz del árbol entero (i.e., el tiempo al ancestro común más reciente). Para interpretar este valor, es importante tener en cuenta las unidades que estamos usando en nuestro análisis, en este caso, las unidades se dan en terminos de meses dado que las muestras se recolectaron en diferentes meses del mismo año. Por consiguiente, si interpretamos este valor de 0.925 de TreeHeight podemos inferir que las muestras compartieron un ancestro común más reciente en enero de 2009, tres meses antes de que se detectaran los primeros casos de H1N1 en Estados Unidos.
+
+Otro diagnóstico del muestreo MCMC es el tamaño efectivo de la muestra, que en Tracer se muestra como ESS. Se trata del número estimado de muestras independientes obtenidas. Una regla general es asegurarse de que el ESS es al menos 200 para todos los parámetros.
+
+Seleccione los parámetros TreeHeight y rate.mean (puede que necesite utilizar la tecla comando o control para seleccionarlos al mismo tiempo), después seleccione la pestaña Joint-marginal. TreeHeight es la edad de la raíz del árbol, mientras que rate.mean es la tasa de sustitución media del modelo. Si estos parámetros fueran independientes, esperaríamos que formaran una nube a lo largo de los ejes x e y. Sin embargo, estos dos parámetros están naturalmente correlacionados. Sin embargo, estos dos parámetros están naturalmente correlacionados. En concreto, las tasas altas suelen dar lugar a escalas temporales más recientes para la raíz, mientras que las tasas más bajas dan lugar a edades más antiguas de la raíz.
+
+La exploración de otros parametros es fundamental a la hora de verificar que nuestros datos provienen de un muestreo probabilístico robusto sumado a la creación de modelos que puedan predecir de manera acertada el comportamiento de nuestros datos. Por esto es importante que se realice un análisis exploratorio de los resultados antes de usarlos para informar decisiones en salud pública o para publicarlos.
 
 
